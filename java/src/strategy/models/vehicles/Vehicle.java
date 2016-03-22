@@ -1,4 +1,4 @@
-package strategy.models;
+package strategy.models.vehicles;
 
 public abstract class Vehicle {
 

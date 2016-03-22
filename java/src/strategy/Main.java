@@ -1,7 +1,8 @@
 package strategy;
 
-import strategy.models.SUVVehicle;
-import strategy.models.SedanVehicle;
+import strategy.models.InsuranceCompany;
+import strategy.models.vehicles.SUVVehicle;
+import strategy.models.vehicles.SedanVehicle;
 
 /**
  * Main is the client class

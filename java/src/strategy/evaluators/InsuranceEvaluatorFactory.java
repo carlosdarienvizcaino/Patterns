@@ -1,6 +1,6 @@
 package strategy.evaluators;
 
-import strategy.models.Vehicle;
+import strategy.models.vehicles.Vehicle;
 
 public enum InsuranceEvaluatorFactory {
 

@@ -1,8 +1,8 @@
-package strategy;
+package strategy.models;
 
 import strategy.evaluators.InsuranceEvaluator;
 import strategy.evaluators.InsuranceEvaluatorFactory;
-import strategy.models.Vehicle;
+import strategy.models.vehicles.Vehicle;
 
 public class InsuranceCompany {
 
