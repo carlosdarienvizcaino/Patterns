@@ -1,0 +1,14 @@
+
+
+
+## IntelliJ ##
+out
+**.idea/
+*.iml
+java/.idea
+java/java.iml
+**Patterns.iml
+
+## Node ##
+**/js/src/node_modules/
+*js/src/package.json
