@@ -5,7 +5,21 @@ import strategy.evaluators.SedanInsuranceEvaluator;
 import strategy.models.InsuranceCompany;
 
 /**
- * Main is the client class
+ * Main is the Client class
+ *  Knows about the Context (InsuraceCompany) class
+ *  Knows about the different strategies there is
+ *      In order to abstract the Client from the Strategies
+ *      a Factory class could be used in order to create a strategy given the
+ *      clients need.
+ *
+ *      Client ==>
+ *                  Context ==>
+ *                              StrategyFactory
+ *                              <== Strategy (requested Strategy
+ *
+ *      Perhaps the client could give an input like a String "SUV"
+ *
+ *
  * */
 public class Main {
     public static void main(String[] args){
