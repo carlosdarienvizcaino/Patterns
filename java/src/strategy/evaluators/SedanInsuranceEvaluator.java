@@ -2,8 +2,8 @@ package strategy.evaluators;
 
 public class SedanInsuranceEvaluator implements InsuranceEvaluator{
 
-    public int getQuoteForVehicle() {
+    public int getQuoteForVehicle(int data) {
        // TODO: Logic goes here
-        return 5;
+        return data+5;
     }
 }

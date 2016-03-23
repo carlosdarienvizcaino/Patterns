@@ -2,5 +2,5 @@ package strategy.evaluators;
 
 public interface InsuranceEvaluator {
 
-    int getQuoteForVehicle();
+    int getQuoteForVehicle(int data);
 }

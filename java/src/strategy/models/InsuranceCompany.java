@@ -1,19 +1,31 @@
 package strategy.models;
 
 import strategy.evaluators.InsuranceEvaluator;
-import strategy.evaluators.InsuranceEvaluatorFactory;
-import strategy.models.vehicles.Vehicle;
+import strategy.evaluators.InvalidVehicleEvaluator;
 
+
+/**
+ * InsuraceCompany
+ *  Is the Context class
+ *  Has a reference to a Strategy class
+ *  Has an InvalidVehicleEvaluator Strategy by Default
+ *  Is the used by the Client
+ *  Passes Data (an integer) to the Strategy;
+ * */
 public class InsuranceCompany {
 
-    public InsuranceCompany(){}
+    private InsuranceEvaluator insuranceEvaluator;
+    private int insuranceCompanyFee = 5;
 
-    public int getQuoteForVehicle(Vehicle vehicle){
+    public InsuranceCompany(){
+        insuranceEvaluator = new InvalidVehicleEvaluator();
+    }
 
-        InsuranceEvaluator insuranceEvaluator = InsuranceEvaluatorFactory.createInsuranceEvaluator(vehicle);
+    public void setInsuranceEvaluator(InsuranceEvaluator evaluator){
+        this.insuranceEvaluator = evaluator;
+    }
 
-        int quote = insuranceEvaluator.getQuoteForVehicle();
-
-        return quote;
+    public int getQuoteForVehicle(){
+        return insuranceEvaluator.getQuoteForVehicle(insuranceCompanyFee);
     }
 }

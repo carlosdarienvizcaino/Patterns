@@ -1,24 +1,29 @@
 package strategy;
 
+import strategy.evaluators.SUVInsuranceEvaluator;
+import strategy.evaluators.SedanInsuranceEvaluator;
 import strategy.models.InsuranceCompany;
-import strategy.models.vehicles.SUVVehicle;
-import strategy.models.vehicles.SedanVehicle;
 
 /**
  * Main is the client class
  * */
 public class Main {
     public static void main(String[] args){
+
         InsuranceCompany insuranceCompany = new InsuranceCompany();
-        int quote1 = insuranceCompany.getQuoteForVehicle( new SUVVehicle() );
-        int quote2 = insuranceCompany.getQuoteForVehicle( new SedanVehicle() );
+        int defaultQuote = insuranceCompany.getQuoteForVehicle();
 
-        // Null represents any vehicle that is not supported
-        int quote3 = insuranceCompany.getQuoteForVehicle(null);
+        // Calculating Insurance for USV
+        insuranceCompany.setInsuranceEvaluator(new SUVInsuranceEvaluator());
+        int  suvQuote = insuranceCompany.getQuoteForVehicle();
 
-        print(quote1);
-        print(quote2);
-        print(quote3);
+        // Calcualting Insurace for Sedan
+        insuranceCompany.setInsuranceEvaluator(new SedanInsuranceEvaluator());
+        int sedanQuote = insuranceCompany.getQuoteForVehicle();
+
+        print(defaultQuote);
+        print(suvQuote);
+        print(sedanQuote);
 
     }
 
