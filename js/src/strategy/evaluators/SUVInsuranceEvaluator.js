@@ -1,10 +1,11 @@
 
 var InsuranceEvaluator = require("./InsuranceEvaluator");
 
-var SUVInsuranceEvalutor = Object.create(InsuranceEvaluator);
+function SUVInsuranceEvalutor(){}
+SUVInsuranceEvalutor.prototype = InsuranceEvaluator.prototype;
 
-SUVInsuranceEvalutor.getQuote= function(){
-    return 10; 
+SUVInsuranceEvalutor.getQuote= function(data){
+    return data + 10; 
 }
 
 module.exports = SUVInsuranceEvalutor;

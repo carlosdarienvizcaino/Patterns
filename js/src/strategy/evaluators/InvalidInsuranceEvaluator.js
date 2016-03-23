@@ -1,7 +1,9 @@
 
 var InsuranceEvaluator = require("./InsuranceEvaluator");
 
-var InvalidInsuranceEvaluator = Object.create(InsuranceEvaluator);
+function InvalidInsuranceEvaluator(){}
+
+InvalidInsuranceEvaluator.prototype = InsuranceEvaluator.prototype;
 
 InvalidInsuranceEvaluator.getQuote= function(){
     return -1; 
