@@ -35,9 +35,9 @@ public class Main {
         insuranceCompany.setInsuranceEvaluator(new SedanInsuranceEvaluator());
         int sedanQuote = insuranceCompany.getQuoteForVehicle();
 
-        print(defaultQuote);
-        print(suvQuote);
-        print(sedanQuote);
+        print("Default quote is -1. Result is " + defaultQuote);
+        print("SUV quote is 15. Result is " + suvQuote);
+        print("Sedan quote is 10. Result is " + sedanQuote);
 
     }
 
